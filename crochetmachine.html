@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Crochet Machine — Master’s Thesis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.meta { margin-top: -0.75rem; color: #888; }
+			.card { border: 1px solid rgba(0,0,0,0.08); padding: 1.25rem; border-radius: 0.75rem; }
+			.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+			.badge { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(0,0,0,0.06); font-size: 0.85rem; margin-right: .4rem;}
+			.caption { font-size: 0.9rem; color: #777; margin-top: .35rem;}
+			video { width: 100%; border-radius: 0.5rem; }
+			iframe.pdf { width: 100%; height: 720px; border: none; }
+		
+  video {
+    width: 45%;
+    float: left;
+    margin: 0 2rem 1rem 0;
+    border-radius: 0.5rem;
+  }
+</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo">
+						<span class="symbol"><img src="images/smiley.png" alt="" /></span><span class="title">Sofia Handzy</span>
+					</a>
+					<nav>
+						<ul><li><a href="#menu">Menu</a></li></ul>
+					</nav>
+				</div>
+			</header>
+
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="aboutme.html">about me</a></li>
+					<li><a href="workexp.html">work experience</a></li>
+					<li><a href="crochetmachine.html">crochet machine</a></li>
+					<li><a href="ergpal.html">ergpal - senior capstone project</a></li>
+					<li><a href="marsrover.html">mars rover wheel designs</a></li>
+					<li><a href="tempanalyzer.html">temperature analyzer</a></li>
+					<li><a href="personalproj.html">personal projects</a></li>
+					<li><a href="contact.html">contact</a></li>
+				</ul>
+			</nav>
+
+			<div id="main">
+				<div class="inner">
+					<h1>Crochet Machine — Master’s Thesis</h1>
+					<span class="image right"><img src="images/iso_view_cromat.jpg" alt="Isometric view of the crochet machine (placeholder)" /></span>
+
+					<section class="card">
+						<h2>Overview</h2>
+						<p>
+							This project explores whether crocheting can be automated by breaking human motion into <strong>simple linear and rotational movements</strong> and distributing them across three subsystems: a <em>crocheter</em> (rack-and-pinion hook), a <em>tensioner</em> (capstan yarn control), and a <em>holder</em> (rotating textile platform). The system is built from accessible, low-cost components and driven in open loop for an initial proof of concept.
+						</p>
+						<div class="badges">
+							<span class="badge">8020 frame</span>
+							<span class="badge">Arduino</span>
+							<span class="badge">MATLAB</span>
+							<span class="badge">PLA 3D prints</span>
+							<span class="badge">Motion capture</span>
+						</div>
+					</section>
+
+					<section>
+						<h2>Abstract &amp; Background</h2>
+						<p>
+							The motivation combines <strong>humanitarian</strong> and <strong>environmental</strong> concerns in textile production. The work demonstrates that the core motions of crocheting can be decomposed and actuated mechanically, laying groundwork for more ethical and sustainable manufacturing approaches.
+						</p>
+					</section>
+
+					<section>
+						<h2>Design &amp; Implementation</h2>
+						<div class="grid">
+							<div class="card">
+								<h3>Crocheter</h3>
+								<p>Rack-&amp;-pinion linear actuation moves a press-fit crochet hook along a guided track to form loops.</p>
+							</div>
+							<div class="card">
+								<h3>Tensioner</h3>
+								<p>A servo-driven capstan wraps and feeds yarn consistently around the hook to maintain stitch tension.</p>
+							</div>
+							<div class="card">
+								<h3>Holder</h3>
+								<p>A rotating plate secures the textile and advances the work for crocheting in the round; a re-tension arm resets stitches.</p>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>Motion Capture &amp; Control</h2>
+						<p>
+							Kinematic experiments indicated that the hook’s dominant motion can be approximated as <strong>linear</strong>, which informed the simplified mechanical design. A MATLAB pattern generator estimates stitch counts and project dimensions for rectangles and ellipsoids, enabling design-to-fabrication planning.
+						</p>
+					</section>
+
+					<section>
+						<h2>Results</h2>
+						<p>
+							The prototype successfully produced a <strong>single chain stitch</strong> end-to-end, validating the underlying mechanism and control sequence.
+						</p>
+						<video controls playsinline preload="metadata" poster="images/crochet_video_poster.jpg">
+	<!-- Try MP4 first (widest support), then MOV (QuickTime) -->
+	<source src="images/buildcromat.mp4" type="video/mp4" />
+	<source src="videos/crochet_build.mov" type="video/quicktime" />
+	Your browser can't play the embedded video.
+	<a href="videos/crochet_build.mov" download>Download the video</a> instead.
+</video>
+					</section>
+					<section>
+						<h2>Media &amp; Downloads</h2>
+						<ul class="actions">
+							<li><a href="docs/handzy_thesis.pdf" class="button primary" target="_blank" rel="noopener">View Thesis (PDF)</a></li>
+							<li><a href="docs/crochet machine presentation! .pdf" class="button" target="_blank" rel="noopener">View Thesis Presentation</a></li>
+						</ul>
+						<!-- <div class="grid">
+							<div class="card">
+								<h3>Thesis (Embedded Preview)</h3>
+								<iframe class="pdf" src="docs/handzy_thesis.pdf"></iframe>
+								<p class="caption">Drop your thesis at <code>assets/docs/handzy_thesis.pdf</code>.</p>
+							</div>
+							<div class="card">
+								<h3>Slides (PDF)</h3>
+								<p>Add your presentation to <code>assets/docs/thesis_presentation.pdf</code> to enable the button above.</p>
+							</div>
+							<div class="card">
+								<h3>Isometric View</h3>
+								<p>Replace the page banner with your isometric image at <code>images/crochet_isometric.jpg</code>.</p>
+							</div>
+							<div class="card">
+								<h3>Build Video</h3>
+								<p>Upload <code>videos/crochet_build.mp4</code> (H.264) and an optional poster image at <code>images/crochet_video_poster.jpg</code>.</p>
+							</div> -->
+						</div>
+					</section>
+				</div>
+			</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							 <form method="post" action="mailto:sofia@handzy.net" enctype="text/plain">
+						<div class="fields">
+						<div class="field half">
+							<input type="text" name="name" id="name" placeholder="Name" required />
+						</div>
+						<div class="field half">
+							<input type="email" name="email" id="email" placeholder="Email" required />
+						</div>
+						<div class="field">
+							<textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
+						</div>
+						</div>
+						<ul class="actions">
+						<li><input type="submit" value="Send" class="primary" /></li>
+						<li><input type="reset" value="Clear" /></li>
+						</ul>
+					</form>
+					</section>
+
+					<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li>
+						<a href="https://github.com/kvitka123" target="_blank" rel="noopener" class="icon brands style2 fa-github">
+							<span class="label">GitHub</span>
+						</a>
+						</li>
+						<li>
+						<a href="tel:+19088215200" class="icon solid style2 fa-phone">
+							<span class="label">Phone</span>
+						</a>
+						</li>
+						<li>
+						<a href="mailto:sofia@handzy.net" class="icon solid style2 fa-envelope">
+							<span class="label">Email</span>
+						</a>
+						</li>
+					</ul>
+					</section>
+
+					<ul class="copyright">
+					<li>&copy; Sofia Handzy. All rights reserved.</li>
+					</ul>
+				</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

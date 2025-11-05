@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Temperature Analyzer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.meta { margin-top: -0.75rem; color: #888; }
+			.card { border: 1px solid rgba(0,0,0,0.08); padding: 1.25rem; border-radius: 0.75rem; }
+			.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+			.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+			.gallery img { width: 100%; height: auto; border-radius: .5rem; }
+			.caption { font-size: 0.9rem; color: #777; margin-top: .35rem;}
+			.badge { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 999px; background: rgba(0,0,0,0.06); font-size: 0.85rem; margin-right: .4rem;}
+			.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .75rem; }
+			.kv div { background: rgba(0,0,0,0.03); padding: .75rem .9rem; border-radius: .5rem; }
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/smiley.png" alt="" /></span><span class="title">Sofia Handzy</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">home</a></li>
+							<li><a href="aboutme.html">about me</a></li>
+							<li><a href="workexp.html">work experience</a></li>
+							<li><a href="crochetmachine.html">crochet machine</a></li>
+							<li><a href="ergpal.html">ergpal - senior capstone project</a></li>
+							<li><a href="marsrover.html">mars rover wheel designs</a></li>
+							<li><a href="tempanalyzer.html">temperature analyzer </a></li>
+							<li><a href="personalproj.html">personal projects</a></li>
+							<li><a href="contact.html">contact</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Temperature Analyzer</h1>
+							<span class="image main"><img src="images/initial_sketch_2.jpg" alt="CAD model of the Temperature Analyzer (placeholder)" /></span>
+
+							<section class="card">
+								<h2>Overview</h2>
+								<p>
+									A compact <strong>Arduino‑based temperature analyzer</strong> built to capture, display, and log temperature data for quick experiments and classroom demos.
+									The system combines a <em>digital sensor</em>, a simple <em>user interface</em>, and a <em>3D‑printed enclosure</em> for durability.
+								</p>
+								<div class="badges">
+									<span class="badge">Arduino</span>
+									<span class="badge">Digital sensor</span>
+									<span class="badge">Data logging</span>
+									<span class="badge">3D‑printed enclosure</span>
+								</div>
+							</section>
+
+							<section>
+								<h2>Design Engineering Process</h2>
+								<div class="grid">
+									<div class="card">
+										<h3>1) Problem Framing</h3>
+										<p>Reliable, low‑cost tool to measure and visualize temperature changes for labs and quick tests.</p>
+									</div>
+									<div class="card">
+										<h3>2) Requirements</h3>
+										<div class="kv">
+											<div>±0.5–1.0&nbsp;°C accuracy</div>
+											<div>1–2&nbsp;s refresh</div>
+											<div>CSV logging</div>
+											<div>Battery or USB power</div>
+										</div>
+									</div>
+									<div class="card">
+										<h3>3) Concepts &amp; Sketches</h3>
+										<p>Explored handheld vs. benchtop layouts; sensor placement and airflow; display and button positions.</p>
+									</div>
+									<div class="card">
+										<h3>4) CAD &amp; BOM</h3>
+										<p>Modeled enclosure and standoffs; selected sensor, display, buttons, and connectors for quick assembly.</p>
+									</div>
+									<div class="card">
+										<h3>5) Prototype Build</h3>
+										<p>Wired Arduino + sensor on perfboard; printed enclosure; brought up firmware and UI.</p>
+									</div>
+									<div class="card">
+										<h3>6) Test &amp; Iterate</h3>
+										<p>Calibration against a reference thermometer; noise filtering and sampling‑rate tuning.</p>
+									</div>
+									<div class="card">
+										<h3>7) Final Build</h3>
+										<p>Clean wiring, labeled headers, tightened tolerances; improved USB strain relief.</p>
+									</div>
+									<div class="card">
+										<h3>8) Next Steps</h3>
+										<p>Multi‑sensor support, humidity option, and web dashboard via serial/ble.</p>
+									</div>
+								</div>
+							</section>
+
+							<section>
+								<h2>Hardware &amp; CAD</h2>
+								<ul>
+									<li><strong>Sensor:</strong> digital temperature sensor (drop‑in footprint for thermistor if needed)</li>
+									<li><strong>MCU:</strong> Arduino‑class dev board</li>
+									<li><strong>UI:</strong> small display + single button (start/mark)</li>
+									<li><strong>Enclosure:</strong> 3D‑printed body with threaded inserts</li>
+								</ul>
+							</section>
+
+							<section>
+								<h2>Gallery</h2>
+								<div class="gallery">
+									<div>
+										<img src="images/initial_sketch_1.jpg" alt="Concept sketch 1 (placeholder)" />
+										<p class="caption">Sketch — concept 1</p>
+									</div>
+									<!-- <div>
+										<img src="images/initial_sketch_2.jpg" alt="Concept sketch 2 (placeholder)" />
+										<p class="caption">Sketch — concept 2 (<code>images/temp_sketch2.jpg</code>)</p>
+									</div> -->
+									<div>
+										<img src="images/cadtempan.jpg" alt="CAD model (placeholder)" />
+										<p class="caption">CAD model </p>
+									</div>
+									<div>
+										<img src="images/arduino_temp.jpg" alt="Arduino board wiring (placeholder)" />
+										<p class="caption">Arduino board </p>
+									</div>
+								</div>
+							</section>
+
+							<section class="card">
+								<h2>Results</h2>
+								<p>
+									The analyzer achieves stable readings within the target accuracy band and logs directly to CSV for quick analysis. The enclosure protects wiring and makes the device classroom‑friendly.
+								</p>
+							</section>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							 <form method="post" action="mailto:sofia@handzy.net" enctype="text/plain">
+						<div class="fields">
+						<div class="field half">
+							<input type="text" name="name" id="name" placeholder="Name" required />
+						</div>
+						<div class="field half">
+							<input type="email" name="email" id="email" placeholder="Email" required />
+						</div>
+						<div class="field">
+							<textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
+						</div>
+						</div>
+						<ul class="actions">
+						<li><input type="submit" value="Send" class="primary" /></li>
+						<li><input type="reset" value="Clear" /></li>
+						</ul>
+					</form>
+					</section>
+
+					<section>
+					<h2>Follow</h2>
+					<ul class="icons">
+						<li>
+						<a href="https://github.com/kvitka123" target="_blank" rel="noopener" class="icon brands style2 fa-github">
+							<span class="label">GitHub</span>
+						</a>
+						</li>
+						<li>
+						<a href="tel:+19088215200" class="icon solid style2 fa-phone">
+							<span class="label">Phone</span>
+						</a>
+						</li>
+						<li>
+						<a href="mailto:sofia@handzy.net" class="icon solid style2 fa-envelope">
+							<span class="label">Email</span>
+						</a>
+						</li>
+					</ul>
+					</section>
+
+					<ul class="copyright">
+					<li>&copy; Sofia Handzy. All rights reserved.</li>
+					</ul>
+				</div>
+				</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
